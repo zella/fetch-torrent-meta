@@ -1,0 +1,12 @@
+{
+  "name": "fetch-torrent-meta",
+  "bin": "main.js",
+  "version": "0.0.1",
+  "description": "Fetch torrent meta",
+  "author": "zella",
+  "license": "MIT",
+  "dependencies": {
+    "webtorrent": "^0.107.17",
+    "rimraf": "^2.6.3"
+  }
+}
