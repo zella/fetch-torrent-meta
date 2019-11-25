@@ -1,0 +1,13 @@
+FROM arm32v7/node:12
+
+#building arm on x86
+COPY qemu-arm-static /usr/bin
+RUN chmod +x /usr/bin/qemu-arm-static
+
+WORKDIR /workdir
+
+RUN npm install -g pkg@4.4.0
+
+#RUN pkg --targets node12-armv7 --out-path /workdir .
+
+CMD npm install && pkg --targets node12-armv7 --out-path /workdir . && sleep 1
